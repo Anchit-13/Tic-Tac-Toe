@@ -6,7 +6,7 @@ using namespace std;
 
 char matrix[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
 
-void drawboard(){
+void drawmatrix(){
     cout<<" "<<matrix[0][0]<<" | "<<matrix[0][1]<<" | "<<matrix[0][2]<<endl;
     cout<<"-----------\n";
     cout<<" "<<matrix[1][0]<<" | "<<matrix[1][1]<<" | "<<matrix[1][2]<<endl;
@@ -33,7 +33,7 @@ bool check_winner(){
 
 int main(){
     int i, row, col, slot, flag=1;
-    drawboard();
+    drawmatrix();
     for(i=0;i<9 && flag;i++){
 
           cout<<"Player "<<(i%2)+1<<" , enter your slot number:";
@@ -54,14 +54,14 @@ int main(){
             continue;
           }
           matrix[row][col]=(i%2==0)?'X':'O';
-          drawboard();
+          drawmatrix();
           cout<<"\n";
           if(check_winner()){
             cout<<"Player "<<(i%2)+1<<" won the game\n";
             flag=0;
             break;
           }
-          //SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
+          
     }
     if(flag)
         cout<<"Tie\n";
