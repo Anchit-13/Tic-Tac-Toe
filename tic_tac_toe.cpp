@@ -1,7 +1,4 @@
 #include<bits/stdc++.h>
-/*#include<conio.h>
-#include<ctime>
-#include <windows.h>*/
 using namespace std;
 
 char matrix[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
@@ -61,7 +58,7 @@ int main(){
             flag=0;
             break;
           }
-          
+
     }
     if(flag)
         cout<<"Tie\n";
